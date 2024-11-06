@@ -4,8 +4,37 @@
 # print(a)
 #
 #
+import os
+print(list(range(-1,5,)))
+for i in range(-1,-10):
+    print(i)
 
+numbers = [1,2,3,4,5]
+a,b, *rest = numbers
+print(a,' ',b)
+print(*numbers)
 import string
+
+
+def find_first_words(path):
+    list_result = []
+    with open(path, 'r+') as file:
+        for line in file:
+            if line == '\n':
+                list_result.append('')
+            else:
+                line_stripped = list(line.split())
+                list_result.append(line_stripped[0])
+
+    return list_result
+
+
+# папка и файлы, которые мы создадим с помощью Python, и с которыми будем работать
+
+
+print(find_first_words('simple_file_with_empty_lines.txt'))
+
+
 class StringManipulator:
     """Docstring of StringManipulator"""
     import string
@@ -34,10 +63,10 @@ class StringManipulator:
         """возвращает атрибут phrase после всего, что мы с ним сделали с помощью других методов"""
         return self.phrase
 
-if __name__ == '__main__':
-    str_manip = StringManipulator('cOOL pyThON')
-    str_manip.make_title()
-    print(str_manip.get_manipulated())
+# if __name__ == '__main__':
+#     str_manip = StringManipulator('cOOL pyThON')
+#     str_manip.make_title()
+#     print(str_manip.get_manipulated())
 #
 # magic_dict = dict(val1=44, val2='secret value', val3=55.0, val4=1)
 #
