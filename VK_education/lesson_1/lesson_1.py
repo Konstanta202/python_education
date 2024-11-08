@@ -1,19 +1,22 @@
-# a = []
-# a = list()
-# a = [1,2,3,4,5, "abs", "bve"]
-# print(a)
-#
-#
-import os
-print(list(range(-1,5,)))
-for i in range(-1,-10):
-    print(i)
-
-numbers = [1,2,3,4,5]
-a,b, *rest = numbers
-print(a,' ',b)
-print(*numbers)
+import itertools
 import string
+import pandas as pd
+import os
+
+if __name__ == '__main__':
+    df = pd.DataFrame(data=[
+        ["Rock","Heavy PAPER","ENGLISH"],
+        ["POP", "BIBER", "ENGLISH"],
+        ["Rock", "Ramshtain", "Germany"],
+        ["Rock", "SOAD", "ARMENIA"]
+    ], columns=['Type music', 'Group/Solist',"Country"])
+    print(df)
+
+
+
+
+
+
 
 
 def find_first_words(path):
@@ -32,7 +35,7 @@ def find_first_words(path):
 # папка и файлы, которые мы создадим с помощью Python, и с которыми будем работать
 
 
-print(find_first_words('simple_file_with_empty_lines.txt'))
+# print(find_first_words('simple_file_with_empty_lines.txt'))
 
 
 class StringManipulator:
@@ -63,10 +66,10 @@ class StringManipulator:
         """возвращает атрибут phrase после всего, что мы с ним сделали с помощью других методов"""
         return self.phrase
 
-# if __name__ == '__main__':
-#     str_manip = StringManipulator('cOOL pyThON')
-#     str_manip.make_title()
-#     print(str_manip.get_manipulated())
+
+
+
+
 #
 # magic_dict = dict(val1=44, val2='secret value', val3=55.0, val4=1)
 #
